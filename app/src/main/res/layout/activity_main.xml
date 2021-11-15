@@ -25,6 +25,9 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="5"
             android:paddingBottom="0dp"
             android:paddingTop="0dp"
             android:maxLines="1"
