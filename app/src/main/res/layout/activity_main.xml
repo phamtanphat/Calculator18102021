@@ -7,6 +7,11 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.textfield.TextInputLayout
+        app:placeholderText="Example : Mr A"
+        android:hint="Name"
+        app:hintTextColor="#F44336"
+        app:startIconTint="@null"
+        app:startIconDrawable="@drawable/ic_input1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -15,6 +20,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
