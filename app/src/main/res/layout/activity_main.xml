@@ -12,6 +12,11 @@
         app:hintTextColor="#F44336"
         app:startIconTint="@null"
         app:startIconDrawable="@drawable/ic_input1"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="2dp"
+        app:boxBackgroundMode="outline"
+        app:boxCollapsedPaddingTop="0dp"
+        app:boxBackgroundColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,6 +25,8 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
             android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
