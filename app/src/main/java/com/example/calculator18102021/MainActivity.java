@@ -3,6 +3,7 @@ package com.example.calculator18102021;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -35,7 +36,26 @@ public class MainActivity extends AppCompatActivity {
         mBtnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Click button công",Toast.LENGTH_SHORT).show();
+                // Thông báo
+//                Toast.makeText(MainActivity.this,"Click button công",Toast.LENGTH_SHORT).show();
+                // Kiểm tra giá trị trong system => System.out
+//                Log.d("BBB","hello");
+
+                String textNumber1 = mTxtInputEdtNumber1.getText().toString();
+                String textNumber2 = mTxtInputEdtNumber2.getText().toString();
+
+                //Kiểm tra giá trị
+                if (textNumber1.isEmpty() || textNumber2.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Invalid input", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                int number1 = Integer.parseInt(textNumber1);
+                int number2 = Integer.parseInt(textNumber2);
+
+                int result = number1 + number2;
+                mTvResult.setText("Result = " + result);
+
             }
         });
 
