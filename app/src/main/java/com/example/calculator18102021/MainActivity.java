@@ -59,6 +59,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mBtnDiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String textNumber1 = mTxtInputEdtNumber1.getText().toString();
+                String textNumber2 = mTxtInputEdtNumber2.getText().toString();
+                if(textNumber1.isEmpty() || textNumber2.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Vui lòng nhập đủ giá trị", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                float number1 = Integer.parseInt(textNumber1);
+                float number2 = Integer.parseInt(textNumber2);
+                if(number2==0){
+                    Toast.makeText(MainActivity.this, "Invaild values", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                float resultDiv = (number1/number2);
+                String result= String.format("%.2f",resultDiv);
+                mTvResult.setText("Result = " + result);
+            }
+        });
+
 
     }
 }
